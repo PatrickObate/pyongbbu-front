@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getProducts, getProductsCount } from "../../../functions/product";
+import { getProducts } from "../../../functions/product";
 import {
   NewProductsSection,
   ProductsSection,
   ProductTitle,
   CuteImg,
-  imgdiv,
 } from "./NewProductsElements";
 import ProductCard from "../../Cards/ProductCard";
 import LoadingCard from "../../Cards/LoadingCard";
@@ -56,12 +55,10 @@ const NewProducts = () => {
               </div>
             )}
           </div>
-          <imgdiv>
             <CuteImg
               src={bear}
               style={{ transform: `translateY(-${offsetY * 0.1}px)` }}
             />
-          </imgdiv>
         </ProductsSection>
         <div class="custom-shape-divider-bottom-1641091512">
           <svg

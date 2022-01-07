@@ -24,7 +24,8 @@ export const PaginationDiv = styled.div`
   margin-top: 20px;
 `;
 
-export const imgdiv = styled.div``;
+export const ImgDiv = styled.div``;
+
 export const CuteImg = styled.img`
   z-index: 200;
   position: absolute;

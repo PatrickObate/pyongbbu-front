@@ -5,7 +5,6 @@ import {
   ImageMain,
   Words1,
   ButtonShop,
-  imgdiv,
   CuteImg,
 } from "./MainProductComponents";
 import MainImage from "../../../images/testImage.png";
@@ -29,12 +28,10 @@ const MainProduct = () => {
         <ComponentsContainer>
           <Words1>Walk with Style while wearing our Tote Bags!</Words1>
           <ButtonShop>Shop Now!</ButtonShop>
-          <imgdiv>
             <CuteImg
               src={dino}
               style={{ transform: `translateY(-${offsetY * 0.1}px)` }}
             />
-          </imgdiv>
         </ComponentsContainer>
         <div className="custom-shape-divider-bottom-1638502151">
           <svg

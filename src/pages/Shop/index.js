@@ -11,7 +11,7 @@ import { Menu, Slider, Checkbox } from "antd";
 import SearchForm from "../../components/Forms/SearchForm";
 import { DownSquareOutlined } from "@ant-design/icons";
 
-const { SubMenu, ItemGroup } = Menu;
+const { SubMenu } = Menu;
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -20,7 +20,6 @@ const Shop = () => {
   const [ok, setOk] = useState(false);
   const [categories, setCategories] = useState([]);
   const [categoryIds, setCategoryIds] = useState([]);
-  const [star, setStar] = useState("");
   const [subs, setSubs] = useState([]);
   const [sub, setSub] = useState("");
 
@@ -63,9 +62,8 @@ const Shop = () => {
 
   // 3. load products based on price range
   useEffect(() => {
-    console.log("ok to request");
     fetchProducts({ price });
-  }, [ok]);
+  }, [ok, price]);
 
   const handleSlider = (value) => {
     dispatch({
@@ -108,7 +106,6 @@ const Shop = () => {
       payload: { text: "" },
     });
     setPrice([0, 0]);
-    setStar("");
     setSub("");
     // console.log(e.target.value);
     let inTheState = [...categoryIds];

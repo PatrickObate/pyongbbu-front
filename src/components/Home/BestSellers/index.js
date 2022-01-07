@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { getProducts, getProductsCount } from "../../../functions/product";
+import { getProducts } from "../../../functions/product";
 import {
   NewProductsSection,
   ProductsSection,
   ProductTitle,
-  PaginationDiv,
+
 } from "./NewProductsElements";
 import ProductCard from "../../Cards/ProductCard";
 import LoadingCard from "../../Cards/LoadingCard";
-import { Pagination } from "antd";
 
 const NewProducts = () => {
   const [products, setProducts] = useState([]);
