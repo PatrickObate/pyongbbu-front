@@ -27,7 +27,7 @@ const MainProduct = () => {
         <ImageMain src={MainImage} />
         <ComponentsContainer>
           <Words1>Walk with Style while wearing our Tote Bags!</Words1>
-          <ButtonShop>Shop Now!</ButtonShop>
+          <ButtonShop to="/shop">Shop Now!</ButtonShop>
             <CuteImg
               src={dino}
               style={{ transform: `translateY(-${offsetY * 0.1}px)` }}
