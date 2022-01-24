@@ -10,7 +10,7 @@ const LilAbout = () => {
         <Title>pyong + bbu</Title>
         <Body>
           Established in 2021. Pyongbbu is a brand created in the Phillippines
-          by two individuals that both have a passion for all things Korean!
+          by two individuals that both have a passion for all things Korean.
         </Body>
         <div className="custom-shape-divider-bottom-1638502151">
           <svg
