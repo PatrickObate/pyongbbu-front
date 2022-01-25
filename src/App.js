@@ -67,7 +67,6 @@ const Shop = lazy(() => import("./pages/Shop"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Checkout = lazy(() => import("./pages/checkout"));
 const Payment = lazy(() => import("./pages/payment"));
-const Footer = lazy(() => import("./components/Footer"));
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -162,7 +161,6 @@ const App = () => {
         <UserRoute exact path="/checkout" component={Checkout} />
         <UserRoute exact path="/payment" component={Payment} />
       </Switch>
-      <Footer />
     </Suspense>
   );
 };

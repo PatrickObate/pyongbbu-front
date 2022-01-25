@@ -12,7 +12,7 @@ export const Nav = styled.nav`
     font-size: 0.8333333333333334vw;
     position: sticky;
     top: 0;
-    z-index:999;
+    z-index: 999;
 
     @media screen and (max-width: 960px) {
       transition: 0.8s all ease;
@@ -51,6 +51,12 @@ export const NavLogo = styled(Link)`
   align-items: center;
   margin-left: 1.25vw;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
 
   @media screen and (max-width: 768px) {
     font-size: 1.5rem;
@@ -95,6 +101,26 @@ export const NavLinks = styled(Link)`
   text-decoration: none;
   padding: 0 0.8333333333333334vw;
   height: 100%;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
+`;
+
+export const NavLogOut = styled.div`
+  color: #4765b2;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 0.8333333333333334vw;
+  height: 100%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
 `;
 
 export const NavLinks2 = styled(Link)`
@@ -105,6 +131,11 @@ export const NavLinks2 = styled(Link)`
   padding: 0 0.8333333333333334vw;
   font-size: 1.0416666666666665vw;
   height: 100%;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
 `;
 
 export const Badge = styled.div`
@@ -116,15 +147,4 @@ export const Badge = styled.div`
   color: white;
   font-size: 0.625vw;
   border-radius: 50px;
-`;
-
-export const LogOut = styled.p`
-  /* this is temporary */
-  color: #4765b2;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0 0.8333333333333334vw;
-  height: 100%;
-  cursor: pointer;
 `;

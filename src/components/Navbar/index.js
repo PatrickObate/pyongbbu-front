@@ -10,7 +10,7 @@ import {
   NavItem,
   NavLinks,
   NavLinks2,
-  LogOut,
+  NavLogOut,
 } from "./NavbarElements";
 import { getAuth, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
@@ -62,15 +62,11 @@ const Navbar = ({ toggle }) => {
                 )}
               </NavItem>
             )}
-            {user && (
-              <NavItem>
-                <LogOut onClick={logout}>Log Out</LogOut>
-              </NavItem>
-            )}
+            {user && <NavLogOut onClick={logout}>Log Out</NavLogOut>}
             <NavItem>
               <NavLinks2 to="/cart">
                 <AiOutlineShoppingCart />
-                <Badge count={cart.length} offset={[-4, -21]}/>
+                <Badge count={cart.length} offset={[-4, -21]} />
               </NavLinks2>
             </NavItem>
           </NavMenu>

@@ -15,6 +15,14 @@ export const HeroContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
+
+  @media screen and (max-width: 980px) {
+    height: 60vh;
+  }
+
+  @media screen and (max-width: 690px) {
+    height: 50vh;
+  }
 `;
 
 export const Cloud = styled.div``;
@@ -23,6 +31,9 @@ export const CloudContainer = styled.div`
   /* height: 602px; */
   height: 31.354166666666668vw;
   width: 100%;
+  @media screen and (max-width: 980px) {
+    height: 602px;
+  }
 `;
 const infinite1 = keyframes`
   0%{
@@ -32,6 +43,10 @@ const infinite1 = keyframes`
   100%{
     /* background-position: 1829px;  */
     background-position: 95.26041666666667vw; 
+
+    @media screen and (max-width: 980px) {
+      background-position: 1829px; 
+  }
   }
 `;
 
@@ -41,7 +56,7 @@ export const Clouds1 = styled.div`
   left: 0;
   width: 100%;
   /* height: 602px; */
-  height: 31.354166666666668vw;
+  height: 100vh;
   background: url(${cloud1});
   animation: ${infinite1} 150s linear infinite;
   z-index: 1;
@@ -63,7 +78,7 @@ export const Clouds2 = styled.div`
   left: 0;
   width: 100%;
   /* height: 602px; */
-  height: 31.354166666666668vw;
+  height: 100vh;
   background: url(${cloud2});
   animation: ${infinite2} 100s linear infinite;
   z-index: 1;
@@ -85,7 +100,7 @@ export const Clouds3 = styled.div`
   left: 0;
   width: 100%;
   /* height: 602px; */
-  height: 31.354166666666668vw;
+  height: 100vh;
   background: url(${cloud3});
   animation: ${infinite3} 70s linear infinite;
   z-index: 1;

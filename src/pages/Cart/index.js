@@ -92,7 +92,8 @@ const Cart = ({ history }) => {
               <button
                 onClick={saveOrderToDb}
                 className="btn btn-sm btn-primary mt-2"
-                disabled={!cart.length}
+                disabled
+                // disabled={!cart.length}
               >
                Pay with Credit Card
               </button>
@@ -100,13 +101,14 @@ const Cart = ({ history }) => {
               <button
                 onClick={saveCashOrderToDb}
                 className="btn btn-sm btn-warning text-white mt-2"
-                disabled={!cart.length}
+                // disabled={!cart.length}
+                disabled
               >
                 Pay via G-cash, Paymaya, Bank Transfer
               </button>
             </>
           ) : (
-            <button className="btn btn-sm btn-primary mt-2">
+            <button className="btn btn-sm mt-2">
               <Link
                 to={{
                   pathname: "/login",

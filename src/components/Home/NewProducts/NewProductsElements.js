@@ -6,25 +6,37 @@ export const NewProductsSection = styled.div`
   /* padding: 30px 12.5vw 60px; */
   padding: 1.5625vw 12.5vw 1.5625vw;
   z-index: 150;
+  padding-bottom: 7.604166666666667vw;
+
+  @media screen and (max-width: 980px) {
+    padding: 20px 50px 100px;
+  }
+
+  @media screen and (max-width: 690px) {
+    padding: 20px 30px 50px;
+  }
 `;
 
 export const ProductTitle = styled.h2`
   /* font-size: 50px; */
   font-size: 2.604166666666667vw;
   color: #5f74ac;
-  text-align: left;
   /* margin: 10px 10px 10px 10px; */
   margin: 0.5208333333333333vw 0.5208333333333333vw 0.5208333333333333vw
     0.5208333333333333vw;
+
+  @media screen and (max-width: 980px) {
+    font-size: 25px;
+  }
+  @media screen and (max-width: 980px) {
+    font-size: 19px;
+  }
 `;
 
 export const ProductsSection = styled.div`
-  text-align: center;
   /* margin: 50px 20px 50px 20px; */
-  margin: 2.604166666666667vw 1.0416666666666665vw 2.604166666666667vw
-    1.0416666666666665vw;
+  margin-top: 2.604166666666667vw;
   /* padding-bottom: 50px; */
-  padding-bottom: 2.604166666666667vw;
 `;
 
 export const PaginationDiv = styled.div`
@@ -44,4 +56,7 @@ export const CuteImg = styled.img`
   /* width: 180px; */
   width: 9.375vw;
   height: auto;
+  @media screen and (max-width: 690px) {
+    display: none;
+  }
 `;
