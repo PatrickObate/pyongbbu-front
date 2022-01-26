@@ -1,47 +1,74 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import footerimg from "../../images/footertest.png";
 
 export const FooterContainer = styled.div`
   background: #d6e7f8;
+  height: 30.15625vw;
+  width: 100%;
   position: relative;
-  padding: 80px 60px;
-  z-index: 150;
-`;
-
-export const FooterWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
-`;
-
-export const FooterColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 60px;
-`;
-
-export const FooterRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: 49% 41% 10%;
+  grid-template-rows: 31% 30% 7% 21% 7% 4%;
+  background-image: url(${footerimg});
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+`;
 
-  @media (max-width: 1000px) {
-    grid-template-colums: repeat(auto-fill, minmax(200px, 1fr));
+export const FooterHeader = styled.h2`
+  color: #466ab7;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  font-size: 1.5625vw;
+  text-align: center;
+
+  @media screen and (max-width: 980px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 15px;
   }
 `;
 
-export const FooterTitle = styled.p`
-  font-size: 24px;
-  color: #5f74ac;
-  margin-bottom: 40px;
+export const FooterElements = styled.div`
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  text-align: center;
+  color: #466ab7;
 `;
 
-export const FooterLink = styled(Link)`
-  color: #5f74ac;
-  margin-bottom: 20px;
-  font-size: 18px;
+export const FooterElement = styled.a`
+  font-size: 3.6458333333333335vw;
+  margin-left: 0.8854166666666666vw;
+  margin-right: 0.8854166666666666vw;
   text-decoration: none;
+  color: #466ab7;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 980px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 20px;
+  }
+`;
+
+export const FooterCopyRight = styled.h3`
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  color: #466ab7;
+  text-align: center;
+  font-size: 1.0416666666666665vw;
+
+  @media screen and (max-width: 980px) {
+    font-size: 10px;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 9px;
+  }
 `;

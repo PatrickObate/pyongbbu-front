@@ -64,8 +64,14 @@ export const ButtonShop = styled(Link)`
   /* font-size: 30px; */
   font-size: 1.5625vw;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
   /* border-radius: 30px; */
   border-radius: 1.5625vw;
+  
+  &:hover {
+    color: #fff;
+    transition: 0.2s ease-in-out;
+  }
   @media screen and (max-width: 980px) {
     display: block;
     font-size: 15px;
