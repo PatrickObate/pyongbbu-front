@@ -67,7 +67,7 @@ export const ButtonShop = styled(Link)`
   transition: 0.2s ease-in-out;
   /* border-radius: 30px; */
   border-radius: 1.5625vw;
-  
+
   &:hover {
     color: #fff;
     transition: 0.2s ease-in-out;
