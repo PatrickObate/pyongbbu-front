@@ -4,9 +4,8 @@ export const NewProductsSection = styled.div`
   background: #fef7ef;
   position: relative;
   /* padding: 30px 12.5vw 60px; */
-  padding: 1.5625vw 12.5vw 1.5625vw;
+  padding: 1.5625vw 12.5vw  7.604166666666667vw;
   z-index: 150;
-  padding-bottom: 7.604166666666667vw;
 
   @media screen and (max-width: 980px) {
     padding: 20px 50px 100px;
@@ -21,9 +20,6 @@ export const ProductTitle = styled.h2`
   /* font-size: 50px; */
   font-size: 2.604166666666667vw;
   color: #5f74ac;
-  /* margin: 10px 10px 10px 10px; */
-  margin: 0.5208333333333333vw 0.5208333333333333vw 0.5208333333333333vw
-    0.5208333333333333vw;
 
   @media screen and (max-width: 980px) {
     font-size: 25px;
@@ -43,8 +39,6 @@ export const PaginationDiv = styled.div`
   /* margin-top: 20px; */
   margin-top: 1.0416666666666665vw;
 `;
-
-export const ImgDiv = styled.div``;
 
 export const CuteImg = styled.img`
   z-index: 200;

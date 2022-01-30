@@ -27,7 +27,7 @@ const Footer = () => {
         >
           <AiFillInstagram />
         </FooterElement>
-        <FooterElement href="mailto: pyongbbu@gmail.com">
+        <FooterElement href="mailto:pyongbbu@gmail.com">
           <AiFillMail />
         </FooterElement>
       </FooterElements>

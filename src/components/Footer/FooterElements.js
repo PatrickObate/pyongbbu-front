@@ -39,8 +39,7 @@ export const FooterElements = styled.div`
 
 export const FooterElement = styled.a`
   font-size: 3.6458333333333335vw;
-  margin-left: 0.8854166666666666vw;
-  margin-right: 0.8854166666666666vw;
+  margin: auto 0.8854166666666666vw auto 0.8854166666666666vw;
   text-decoration: none;
   color: #466ab7;
   transition: 0.2s ease-in-out;
@@ -66,9 +65,9 @@ export const FooterCopyRight = styled.h3`
   font-size: 1.0416666666666665vw;
 
   @media screen and (max-width: 980px) {
-    font-size: 10px;
+    font-size: 12px;
   }
   @media screen and (max-width: 690px) {
-    font-size: 9px;
+    font-size: 10px;
   }
 `;

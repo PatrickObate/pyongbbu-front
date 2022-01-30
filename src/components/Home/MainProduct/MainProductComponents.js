@@ -26,9 +26,10 @@ export const ImageContainer = styled.div`
 
 export const ComponentsContainer = styled.div`
   width: 50%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  @media screen and (max-width: 980px) {
+    width: 70%;
+  }
 `;
 
 export const ImageMain = styled.img`
@@ -44,7 +45,6 @@ export const Words1 = styled.h2`
   font-size: 2.604166666666667vw;
   text-align: center;
   color: #5f74ac;
-  display: flex;
   @media screen and (max-width: 980px) {
     font-size: 23px;
   }

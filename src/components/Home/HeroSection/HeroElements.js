@@ -14,7 +14,6 @@ export const HeroContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  display: flex;
 
   @media screen and (max-width: 980px) {
     height: 60vh;
@@ -60,6 +59,15 @@ export const Clouds1 = styled.div`
   background: url(${cloud1});
   animation: ${infinite1} 150s linear infinite;
   z-index: 1;
+
+  @media screen and (max-width: 980px) {
+    height: 60vh;
+    background-size: cover;
+  }
+  @media screen and (max-width: 690px) {
+    height: 30vh;
+    background-size: cover;
+  }
 `;
 const infinite2 = keyframes`
   0%{
@@ -82,6 +90,14 @@ export const Clouds2 = styled.div`
   background: url(${cloud2});
   animation: ${infinite2} 100s linear infinite;
   z-index: 1;
+  @media screen and (max-width: 980px) {
+    height: 60vh;
+    background-size: cover;
+  }
+  @media screen and (max-width: 690px) {
+    height: 30vh;
+    background-size: cover;
+  }
 `;
 const infinite3 = keyframes`
   0%{
@@ -104,6 +120,14 @@ export const Clouds3 = styled.div`
   background: url(${cloud3});
   animation: ${infinite3} 70s linear infinite;
   z-index: 1;
+  @media screen and (max-width: 980px) {
+    height: 60vh;
+    background-size: cover;
+  }
+  @media screen and (max-width: 690px) {
+    height: 30vh;
+    background-size: cover;
+  }
 `;
 
 export const Background = styled.div``;
@@ -157,6 +181,13 @@ export const StandDown = styled(Link)`
   transition: 0s linear;
   background-size: cover;
 
+  @media screen and (max-width: 690px) {
+    width: 55.833333333333336vw;
+    right: 20vw;
+    bottom: 20vw;
+  }
+  
+
   &:hover {
     background: url(${up});
     transition: 0s linear;
@@ -166,6 +197,7 @@ export const StandDown = styled(Link)`
     /* bottom: 114px; */
     bottom: 5.9375vw;
   }
+
 `;
 
 export const DinoPlace = styled.div`
@@ -174,6 +206,9 @@ export const DinoPlace = styled.div`
   bottom: 11.979166666666668vw;
   left: 11.979166666666668vw;
   z-index: 4;
+  @media screen and (max-width: 690px) {
+    display: none;
+  }
 `;
 
 export const BearPlace = styled.div`
@@ -182,6 +217,9 @@ export const BearPlace = styled.div`
   left: 15.925vw;
   z-index: 5;
   width: 19vw;
+  @media screen and (max-width: 690px) {
+    display: none;
+  }
 `;
 
 export const StandPlace = styled.div`
@@ -192,14 +230,11 @@ export const StandPlace = styled.div`
   right: 4.270833333333333vw;
   z-index: 5;
   width: 40.833333333333336vw;
-`;
 
-export const AboutHSection = styled.div`
-  height: 40vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: #d7ddc1;
-  z-index: 200;
+  
+  @media screen and (max-width: 690px) {
+    width: 55.833333333333336vw;
+    right: 20vw;
+    bottom: 6.5vw;
+  }
 `;

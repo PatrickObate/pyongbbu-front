@@ -6,7 +6,6 @@ export const AboutHSection = styled.div`
   z-index: 150;
   position: relative;
   background: #d7ddc1;
-  z-index: 150;
 
   @media screen and (max-width: 980px) {
     padding: 20px 50px 50px;
