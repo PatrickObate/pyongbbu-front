@@ -3,6 +3,10 @@
   position: absolute;
 }
 
+.slider.animated, .carousel .slide img, .slider-wrapper {
+  height: 100% !important;
+  width: auto !important;
+}
 
 .pt-5 {
   padding-top: 90px !important;

@@ -13,6 +13,14 @@ export const FooterContainer = styled.div`
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media screen and (max-width: 690px) {
+    background-position-y: 19px;
+    background-size: cover;
+    height: 53vw;
+    grid-template-rows: 50% 10% 10% 15% 5% 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 export const FooterHeader = styled.h2`
@@ -27,6 +35,8 @@ export const FooterHeader = styled.h2`
   }
   @media screen and (max-width: 690px) {
     font-size: 15px;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
   }
 `;
 
@@ -35,6 +45,11 @@ export const FooterElements = styled.div`
   grid-row: 4 / 5;
   text-align: center;
   color: #466ab7;
+
+  @media screen and (max-width: 690px) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
 `;
 
 export const FooterElement = styled.a`
@@ -69,5 +84,7 @@ export const FooterCopyRight = styled.h3`
   }
   @media screen and (max-width: 690px) {
     font-size: 10px;
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
   }
 `;
