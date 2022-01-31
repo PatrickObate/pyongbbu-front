@@ -155,9 +155,9 @@ const Shop = () => {
       className="container-fluid pt-5 pb-5 bg-primary"
       style={{ minHeight: "100vh" }}
     >
-      <div className="row">
+      <div className="row" >
         <div className="col-md-3 pt-2">
-          <h5>Search/Filter</h5>
+          <h5>Search/Filter:</h5>
           <hr />
 
           <Menu defaultOpenKeys={["1", "2"]} mode="inline">
