@@ -22,13 +22,14 @@ const Search = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} >
       <input
         onChange={handleChange}
         type="search"
         value={text}
         className="form-control mr-sm-2"
         placeholder="Search"
+        style={{border: "none", background: "#efefef"}}
       />
     </form>
   );

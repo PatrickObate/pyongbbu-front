@@ -155,12 +155,12 @@ const Shop = () => {
       className="container-fluid pt-5 pb-5 bg-primary"
       style={{ minHeight: "100vh" }}
     >
-      <div className="row" >
+      <div className="row">
         <div className="col-md-3 pt-2">
           <h5>Search/Filter:</h5>
           <hr />
 
-          <Menu defaultOpenKeys={["1", "2"]} mode="inline">
+          <Menu defaultOpenKeys={["1", "2"]} mode="inline" style={{padding: "10px"}}>
             {/* price */}
             <SearchForm />
             <SubMenu key="1" title={<span className="h6">₱ Price</span>}>
@@ -177,27 +177,13 @@ const Shop = () => {
             </SubMenu>
 
             {/* category */}
-            <SubMenu
-              key="2"
-              title={
-                <span className="h6">
-                  <DownSquareOutlined /> Categories
-                </span>
-              }
-            >
-              <div style={{ maringTop: "-10px" }}>{showCategories()}</div>
+            <SubMenu key="2" title={<span className="h6">Categories</span>}>
+              <div style={{ marginTop: "-10px" }}>{showCategories()}</div>
             </SubMenu>
 
             {/* sub categories */}
-            <SubMenu
-              key="3"
-              title={
-                <span className="h6">
-                  <DownSquareOutlined /> Sub Categories
-                </span>
-              }
-            >
-              <div style={{ maringTop: "-10px" }} className="pl-4 pr-4">
+            <SubMenu key="3" title={<span className="h6">Sub Categories</span>}>
+              <div style={{ marginTop: "-10px" }} className="pl-4 pr-4">
                 {showSubs()}
               </div>
             </SubMenu>
