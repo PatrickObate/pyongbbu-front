@@ -111,7 +111,8 @@ const Product = ({ match, history }) => {
             <ProductThing>Quantity Sold: {sold}</ProductThing>
             <ProductThing>Available: {quantity}</ProductThing>
           </DetailsContainer>
-
+            
+            
           <AddCart onClick={handleAddToCart} disabled={product.quantity < 1}>
             {product.quantity < 1 ? "Out of stock" : "Add to Cart"}
           </AddCart>

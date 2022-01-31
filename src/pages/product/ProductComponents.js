@@ -6,9 +6,11 @@ export const ProductsContainer = styled.div`
   height: 100vh;
   display: flex;
 
-  @media only screen and (max-width: 767px) {
-    /* For mobile phones: */
-    flex-direction: column;
+  @media only screen and (max-width: 980px) {
+    height: 70vh;
+  }
+  @media only screen and (max-width: 690px) {
+    height: auto;
   }
 `;
 
@@ -16,31 +18,32 @@ export const CarouselContainer = styled.div`
   width: 50%;
   z-index: 1;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 980px) {
     /* For mobile phones: */
-    height: 50%;
-    width: 100%;
+    height: 70vh;
+  }
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    height: auto;
   }
 `;
 
 export const CarouselWrapper = styled.div`
-  height: 100%;
   width: 100%;
-`;
-
-export const imgWrapper = styled.div`
-  width: 100%;
-  height: 100%;
 `;
 
 export const ComponentsContainer = styled.div`
   width: 50%;
   align-items: center;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 980px) {
     /* For mobile phones: */
-    height: 50%;
-    width: 100%;
+    height: 70vh;
+  }
+
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    height: auto;
   }
 `;
 
@@ -52,30 +55,72 @@ export const CarouselImage = styled.img`
 export const DetailsContainer = styled.div`
   margin: 10.416666666666668vw 2.604166666666667vw 5.208333333333334vw
     2.604166666666667vw;
+  @media only screen and (max-width: 980px) {
+    /* For mobile phones: */
+    margin: 60px 10px 10px 10px;
+  }
 `;
 
 export const ProductTitle = styled.h1`
   font-size: 2.2916666666666665vw;
   color: #5f74ac;
   align-items: center;
+
+  @media only screen and (max-width: 980px) {
+    /* For mobile phones: */
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    font-size: 15px;
+  }
 `;
 
 export const ProductPrice = styled.h2`
   font-size: 1.8229166666666667vw;
   align-items: center;
   color: #ff9900;
+
+  @media only screen and (max-width: 980px) {
+    /* For mobile phones: */
+    font-size: 20px;
+  }
+
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    font-size: 12px;
+  }
 `;
 
 export const ProductDescription = styled.p`
   font-size: 1.09375vw;
   align-items: center;
   color: #5f74ac;
+
+  @media only screen and (max-width: 980px) {
+    /* For mobile phones: */
+    font-size: 17px;
+  }
+
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    font-size: 10px;
+  }
 `;
 
 export const ProductThing = styled.p`
   font-size: 1.09375vw;
   align-items: center;
   color: #ff9900;
+  @media only screen and (max-width: 980px) {
+    /* For mobile phones: */
+    font-size: 17px;
+  }
+  @media only screen and (max-width: 690px) {
+    /* For mobile phones: */
+    font-size: 10px;
+  }
 `;
 
 export const White = styled.p`

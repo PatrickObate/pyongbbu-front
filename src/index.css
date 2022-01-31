@@ -3,9 +3,28 @@
   position: absolute;
 }
 
-.slider.animated, .carousel .slide img, .slider-wrapper {
+.slider.animated,
+.carousel .slide img,
+.slider-wrapper {
   height: 100% !important;
   width: auto !important;
+}
+
+@media only screen and (max-width: 980px) {
+  /* For mobile phones: */
+  .carousel {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  /* For mobile phones: */
+  .slider.animated,
+  .carousel .slide img,
+  .slider-wrapper {
+    height: auto !important;
+    width: 100% !important;
+  }
 }
 
 .pt-5 {

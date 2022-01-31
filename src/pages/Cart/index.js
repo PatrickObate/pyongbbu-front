@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import ProductCardInCheckout from "../../components/Cards/ProductCardInCheckout";
+import CartHeader from "../../components/CartHeader";
 import { userCart } from "../../functions/user";
 
 const Cart = ({ history }) => {
@@ -57,71 +58,73 @@ const Cart = ({ history }) => {
   );
 
   return (
-    <div
-      className="container-fluid pt-5 bg-primary"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="row">
-        <div className="col-md-8">
-          <h4>Cart / {cart.length} Product</h4>
+    <>
+      <CartHeader />
+      <div
+        className="container-fluid pt-5 bg-primary"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="row">
+          <div className="col-md-8">
+            <h4>Cart / {cart.length} Product</h4>
 
-          {!cart.length ? (
-            <p>
-              No products in cart. <Link to="/shop">Continue Shopping.</Link>
-            </p>
-          ) : (
-            showCartItems()
-          )}
-        </div>
-        <div className="col-md-4">
-          <h4>Order Summary</h4>
-          <hr />
-          <p>Products</p>
-          {cart.map((c, i) => (
-            <div key={i}>
+            {!cart.length ? (
               <p>
-                {c.title} x {c.count} = ₱{c.price * c.count}
+                No products in cart. <Link to="/shop">Continue Shopping.</Link>
               </p>
-            </div>
-          ))}
-          <hr />
-          Total: <b>₱{getTotal()}</b>
-          <hr />
-          {user ? (
-            <>
-              <button
-                onClick={saveOrderToDb}
-                className="btn btn-sm btn-primary mt-2"
-                disabled
-                // disabled={!cart.length}
-              >
-               Pay with Credit Card
+            ) : (
+              showCartItems()
+            )}
+          </div>
+          <div className="col-md-4">
+            <h4>Order Summary</h4>
+            <hr />
+            <p>Products</p>
+            {cart.map((c, i) => (
+              <div key={i}>
+                <p>
+                  {c.title} x {c.count} = ₱{c.price * c.count}
+                </p>
+              </div>
+            ))}
+            <hr />
+            Total: <b>₱{getTotal()}</b>
+            <hr />
+            {user ? (
+              <>
+                <button
+                  onClick={saveOrderToDb}
+                  className="btn btn-sm btn-primary mt-2"
+                  disabled
+                  // disabled={!cart.length}
+                >
+                  Pay with Credit Card
+                </button>
+                <br />
+                <button
+                  onClick={saveCashOrderToDb}
+                  className="btn btn-sm btn-warning text-white mt-2"
+                  // disabled={!cart.length}
+                >
+                  Pay via G-cash, Paymaya, Bank Transfer
+                </button>
+              </>
+            ) : (
+              <button className="btn btn-sm mt-2">
+                <Link
+                  to={{
+                    pathname: "/login",
+                    state: { from: "cart" },
+                  }}
+                >
+                  Login to Checkout
+                </Link>
               </button>
-              <br />
-              <button
-                onClick={saveCashOrderToDb}
-                className="btn btn-sm btn-warning text-white mt-2"
-                // disabled={!cart.length}
-                disabled
-              >
-                Pay via G-cash, Paymaya, Bank Transfer
-              </button>
-            </>
-          ) : (
-            <button className="btn btn-sm mt-2">
-              <Link
-                to={{
-                  pathname: "/login",
-                  state: { from: "cart" },
-                }}
-              >
-                Login to Checkout
-              </Link>
-            </button>
-          )}
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
