@@ -10,6 +10,7 @@ import ProductCard from "../../components/Cards/ProductCard";
 import { Menu, Slider, Checkbox } from "antd";
 import SearchForm from "../../components/Forms/SearchForm";
 import { DownSquareOutlined } from "@ant-design/icons";
+import ShopHeader from "../../components/ShopHeader";
 
 const { SubMenu } = Menu;
 
@@ -151,64 +152,65 @@ const Shop = () => {
   };
 
   return (
-    <div
-      className="container-fluid pt-5 pb-5 bg-primary"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="row">
-        <div className="col-md-3 pt-2">
-          <h5>Search/Filter:</h5>
-          <hr />
+    <>
+      <ShopHeader />
+      <div
+        className="container-fluid pt-5 pb-5 bg-primary"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="row">
+          <div className="col-md-3 pt-2">
+            <Menu
+              defaultOpenKeys={["1", "2"]}
+              mode="inline"
+              style={{ padding: "10px" }}
+            >
+              {/* price */}
+              <SearchForm />
+              <SubMenu key="1" title={<span className="h6">₱ Price</span>}>
+                <div>
+                  <Slider
+                    className="ml-4 mr-4"
+                    tipFormatter={(v) => `₱${v}`}
+                    range
+                    value={price}
+                    onChange={handleSlider}
+                    max="4999"
+                  />
+                </div>
+              </SubMenu>
 
-          <Menu defaultOpenKeys={["1", "2"]} mode="inline" style={{padding: "10px"}}>
-            {/* price */}
-            <SearchForm />
-            <SubMenu key="1" title={<span className="h6">₱ Price</span>}>
-              <div>
-                <Slider
-                  className="ml-4 mr-4"
-                  tipFormatter={(v) => `₱${v}`}
-                  range
-                  value={price}
-                  onChange={handleSlider}
-                  max="4999"
-                />
-              </div>
-            </SubMenu>
+              {/* category */}
+              <SubMenu key="2" title={<span className="h6">Categories</span>}>
+                <div style={{ marginTop: "-10px" }}>{showCategories()}</div>
+              </SubMenu>
 
-            {/* category */}
-            <SubMenu key="2" title={<span className="h6">Categories</span>}>
-              <div style={{ marginTop: "-10px" }}>{showCategories()}</div>
-            </SubMenu>
+              {/* sub categories */}
+              <SubMenu
+                key="3"
+                title={<span className="h6">Sub Categories</span>}
+              >
+                <div style={{ marginTop: "-10px" }} className="pl-4 pr-4">
+                  {showSubs()}
+                </div>
+              </SubMenu>
+            </Menu>
+          </div>
 
-            {/* sub categories */}
-            <SubMenu key="3" title={<span className="h6">Sub Categories</span>}>
-              <div style={{ marginTop: "-10px" }} className="pl-4 pr-4">
-                {showSubs()}
-              </div>
-            </SubMenu>
-          </Menu>
-        </div>
+          <div className="col-md-9">
+            {products.length < 1 && <p>No products found</p>}
 
-        <div className="col-md-9 pt-2">
-          {loading ? (
-            <h2 className="text-danger">Loading...</h2>
-          ) : (
-            <h2 className="text-primary">Our Products!</h2>
-          )}
-
-          {products.length < 1 && <p>No products found</p>}
-
-          <div className="row pb-5">
-            {products.map((p) => (
-              <div key={p._id} className="col-md-4 mt-3">
-                <ProductCard product={p} />
-              </div>
-            ))}
+            <div className="row pb-5">
+              {products.map((p) => (
+                <div key={p._id} className="col-md-4 mt-2">
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

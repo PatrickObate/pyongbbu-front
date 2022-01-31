@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ProductsContainer = styled.div`
   background: #d6e7f8;
   position: relative;
-  width: 100%;
   height: 100vh;
   display: flex;
 
@@ -14,7 +13,6 @@ export const ProductsContainer = styled.div`
 `;
 
 export const CarouselContainer = styled.div`
-  height: 100%;
   width: 50%;
   z-index: 1;
 
@@ -36,12 +34,8 @@ export const imgWrapper = styled.div`
 `;
 
 export const ComponentsContainer = styled.div`
-  display: flex;
   width: 50%;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
 
   @media only screen and (max-width: 767px) {
     /* For mobile phones: */
@@ -56,41 +50,55 @@ export const CarouselImage = styled.img`
 `;
 
 export const DetailsContainer = styled.div`
-margin-right: 50px;
-margin-left: 50px;
-`
+  margin: 10.416666666666668vw 2.604166666666667vw 5.208333333333334vw
+    2.604166666666667vw;
+`;
 
 export const ProductTitle = styled.h1`
-  font-size: 44px;
+  font-size: 2.2916666666666665vw;
   color: #5f74ac;
-  text-align: left;
+  align-items: center;
 `;
 
 export const ProductPrice = styled.h2`
-  font-size: 35px;
-  text-align: left;
+  font-size: 1.8229166666666667vw;
+  align-items: center;
   color: #ff9900;
 `;
 
 export const ProductDescription = styled.p`
-  font-size: 21px;
-  text-align: left;
+  font-size: 1.09375vw;
+  align-items: center;
   color: #5f74ac;
 `;
 
 export const ProductThing = styled.p`
-  font-size: 21px;
-  text-align: left;
+  font-size: 1.09375vw;
+  align-items: center;
   color: #ff9900;
 `;
 
 export const White = styled.p`
-  font-size: 21px;
+  font-size: 1.09375vw;
   text-align: center;
   color: white;
 `;
 
 export const AddCart = styled.button`
+  border: hidden;
+  text-decoration: none;
+  background: #f6aa34;
+  font-size: 3.90625vw;
+  color: white;
+  text-align: center;
+  padding: 1.0416666666666665vw auto 1.0416666666666665vw auto;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+`;
+
+export const AddToWishlist = styled.button`
   border: hidden;
   text-decoration: none;
   background: #f6aa34;
