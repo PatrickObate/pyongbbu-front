@@ -117,7 +117,7 @@ const Cart = ({ history }) => {
                     state: { from: "cart" },
                   }}
                 >
-                  Login to Checkout
+                  Login to Checkout!
                 </Link>
               </button>
             )}
