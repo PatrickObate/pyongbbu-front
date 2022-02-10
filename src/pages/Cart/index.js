@@ -46,7 +46,7 @@ const Cart = ({ history }) => {
           <th scope="col">Title</th>
           <th scope="col">Price</th>
           <th scope="col">Count</th>
-          <th scope="col">Google Drive Link:</th>
+          <th scope="col">Google Drive Link</th>
           <th scope="col">Remove</th>
         </tr>
       </thead>
