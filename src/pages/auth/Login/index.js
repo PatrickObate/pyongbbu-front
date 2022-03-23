@@ -163,9 +163,6 @@ const Login = ({ history }) => {
         <RegLi>
           <BsGoogle onClick={googleLogin} />
         </RegLi>
-        <RegLi>
-          <BsApple />
-        </RegLi>
       </RegUl>
     </FormBox>
   );

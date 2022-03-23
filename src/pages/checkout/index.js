@@ -7,7 +7,6 @@ import {
   createCashOrderForUser,
 } from "../../functions/user";
 import { toast } from "react-toastify";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 
 const Checkout = ({ history }) => {
@@ -15,6 +14,10 @@ const Checkout = ({ history }) => {
   const [total, setTotal] = useState(0);
   const [address, setAddress] = useState("");
   const [contactName, setContactName] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [postalCode, setPostalCode] = useState("");
   const [addressSaved, setAddressSaved] = useState(false);
 
   const dispatch = useDispatch();
@@ -46,10 +49,17 @@ const Checkout = ({ history }) => {
     });
   };
 
-
   const saveAddressToDb = () => {
     // console.log(address);
-    saveUserAddress({ address, authtoken: user.token, contactName}).then((res) => {
+    saveUserAddress({
+      address,
+      authtoken: user.token,
+      contactName,
+      contactNumber,
+      city,
+      state,
+      postalCode,
+    }).then((res) => {
       if (res?.data?.ok) {
         setAddressSaved(true);
         toast.success("Address saved");
@@ -59,19 +69,72 @@ const Checkout = ({ history }) => {
 
   const showAddress = () => (
     <>
-      <ReactQuill
-        theme="snow"
-        value={address}
-        onChange={setAddress}
-        placeholder="Address"
-      />
-      <ReactQuill
-        theme="snow"
-        value={contactName}
-        onChange={setContactName}
-        placeholder="Address"
-      />
-      <br />
+      <div className="form-group">
+        <span>Complete Address</span>
+        <input
+          type="text"
+          className="form-control"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          placeholder="Enter address, apt, space, floor, bld."
+          autoFocus
+        />
+      </div>
+      <div className="form-group">
+        <span>Contact Name</span>
+        <input
+          type="text"
+          className="form-control"
+          value={contactName}
+          onChange={(e) => setContactName(e.target.value)}
+          placeholder="Enter last name, first Name, middle initial"
+          autoFocus
+        />
+      </div>
+      <div className="form-group">
+        <span>Contact Number</span>
+        <input
+          type="text"
+          className="form-control"
+          value={contactNumber}
+          onChange={(e) => setContactNumber(e.target.value)}
+          placeholder="Enter your contact number"
+          autoFocus
+        />
+      </div>
+      <div className="form-group">
+        <span>City</span>
+        <input
+          type="text"
+          className="form-control"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
+          placeholder="Enter your city"
+          autoFocus
+        />
+      </div>
+      <div className="form-group">
+        <span>State</span>
+        <input
+          type="text"
+          className="form-control"
+          value={state}
+          onChange={(e) => setState(e.target.value)}
+          placeholder="Enter your state"
+          autoFocus
+        />
+      </div>
+      <div className="form-group">
+        <span>Postal Code</span>
+        <input
+          type="text"
+          className="form-control"
+          value={postalCode}
+          onChange={(e) => setPostalCode(e.target.value)}
+          placeholder="Enter your Postal Code"
+          autoFocus
+        />
+      </div>
       <button className="btn btn-primary mt-2" onClick={saveAddressToDb}>
         Save
       </button>
@@ -143,16 +206,18 @@ const Checkout = ({ history }) => {
               {PH ? (
                 <button
                   className="btn btn-primary"
-                  disabled={!addressSaved || !products.length}
+                  // disabled={!addressSaved || !products.length}
                   onClick={createCashOrder}
+                  disabled
                 >
                   Place Order
                 </button>
               ) : (
                 <button
                   className="btn btn-primary"
-                  disabled={!addressSaved || !products.length}
+                  // disabled={!addressSaved || !products.length}
                   onClick={() => history.push("/payment")}
+                  disabled
                 >
                   Place Order
                 </button>

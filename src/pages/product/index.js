@@ -12,6 +12,7 @@ import {
   CarouselWrapper,
   ProductThing,
   DetailsContainer,
+  AddToWishlist,
 } from "./ProductComponents";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -68,7 +69,6 @@ const Product = ({ match, history }) => {
     e.preventDefault();
     addToWishlist(product._id, user.token).then((res) => {
       toast.success("Added to wishlist");
-      history.push("/user/wishlist");
     });
   };
 
@@ -111,12 +111,13 @@ const Product = ({ match, history }) => {
             <ProductThing>Quantity Sold: {sold}</ProductThing>
             <ProductThing>Available: {quantity}</ProductThing>
           </DetailsContainer>
-            
-            
+          <AddToWishlist onClick={handleAddToWishlist}>
+            {user && user.role === "subscriber" && "  Add to favorites ♡"}
+            {user && user.role === "admin" && " Add to favorites ♡"}
+          </AddToWishlist>
           <AddCart onClick={handleAddToCart} disabled={product.quantity < 1}>
             {product.quantity < 1 ? "Out of stock" : "Add to Cart"}
           </AddCart>
-          {/* <AddCart onClick={handleAddToWishlist}>Add to Wishlist</AddCart> */}
         </ComponentsContainer>
       </ProductsContainer>
     </>

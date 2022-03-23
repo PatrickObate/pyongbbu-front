@@ -9,7 +9,6 @@ import { getSubs } from "../../functions/sub";
 import ProductCard from "../../components/Cards/ProductCard";
 import { Menu, Slider, Checkbox } from "antd";
 import SearchForm from "../../components/Forms/SearchForm";
-import { DownSquareOutlined } from "@ant-design/icons";
 import ShopHeader from "../../components/ShopHeader";
 
 const { SubMenu } = Menu;

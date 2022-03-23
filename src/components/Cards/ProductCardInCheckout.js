@@ -93,8 +93,8 @@ const ProductCardInCheckout = ({ p }) => {
   return (
     <tbody>
       <tr>
-        <td className="text-center">
-          <div style={{ width: "100px", height: "auto" }}>
+        <td className="text-center ">
+          <div style={{ width: "80px", height: "auto" }}>
             {p.images.length ? (
               <ModalImage small={p.images[0].url} large={p.images[0].url} />
             ) : (
@@ -104,7 +104,7 @@ const ProductCardInCheckout = ({ p }) => {
         </td>
         <td>{p.title}</td>
         <td>₱{p.price}</td>
-        <td className="text-center">
+        <td className="text-center w-25">
           <input
             type="number"
             className="form-control"
@@ -112,11 +112,12 @@ const ProductCardInCheckout = ({ p }) => {
             onChange={handleQuantityChange}
           />
         </td>
-        <td className="text-center">
+        <td className="text-center w-25">
           <input
             type="text"
             className="form-control"
             onChange={handlePictureChange}
+            // style={"width: 30px"}
           />
         </td>
         <td className="text-center">

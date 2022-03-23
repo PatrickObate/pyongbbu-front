@@ -36,26 +36,50 @@ const Invoice = ({ order }) => (
 
       <Text style={styles.text}>
         <Text>
-          Date: {"               "}
+          Date: {" "}
           {new Date(order.paymentIntent.created * 1000).toLocaleString()}
         </Text>
         {"\n"}
         <Text>
-          Order Id: {"         "}
+          Order Id: {" "}
           {order.paymentIntent.id}
         </Text>
         {"\n"}
         <Text>
-          Order Status: {"  "}
-          {order.orderStatus}
+          Method: {" "}
+          {order.paymentIntent.payment_method_types[0]}
         </Text>
         {"\n"}
         <Text>
-          Total Paid: {"       "}
+          Payment: {" "}
+          {order.paymentIntent.status.toUpperCase()}
+        </Text>
+        {"\n"}
+        <Text>
+          Total Paid: {" "}
           {order.paymentIntent.amount}
         </Text>
+        {"\n"}
+        <Text>
+          Costumer Name: {" "}
+          {order && order.orderedBy && order.orderedBy.contactName}
+        </Text>
+        {"\n"}
+        <Text>
+          Costumer Email: {" "}
+          {order && order.orderedBy && order.orderedBy.email}
+        </Text>
+        {"\n"}
+        <Text>
+          Costumer Address: {" "}
+          {order && order.orderedBy && order.orderedBy.address}
+        </Text>
+        {"\n"}
+        <Text>
+          Costumer Number: {" "}
+          {order && order.orderedBy && order.orderedBy.contactNumber}
+        </Text>
       </Text>
-
       <Text style={styles.footer}> ~ Thank you for shopping with us ~ </Text>
     </Page>
   </Document>

@@ -19,10 +19,17 @@
 
 @media only screen and (max-width: 690px) {
   /* For mobile phones: */
+  .carousel {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  /* For mobile phones: */
   .slider.animated,
   .carousel .slide img,
   .slider-wrapper {
-    height: auto !important;
+    height: 100% !important;
     width: 100% !important;
   }
 }

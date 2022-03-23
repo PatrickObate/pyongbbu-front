@@ -1,7 +1,6 @@
 import React from "react";
 import {
-  ShopHeaderBody,
-  ShopHeaderContainer,
+ShopHeaderContainer,
   ShopHeaderHeading,
   ShopHeaderTitle,
 } from "./ShopHeaderElements";

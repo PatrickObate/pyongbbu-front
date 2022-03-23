@@ -1,5 +1,5 @@
 import React from "react";
-import ShowPaymentInfo from "../Cards/ShowPaymentInfo";
+import ShowPaymentInfoAdmin from "../Cards/ShowPaymentInfoAdmin";
 
 const Orders = ({ orders, handleStatusChange }) => {
   const showOrderInTable = (order) => (
@@ -36,12 +36,12 @@ const Orders = ({ orders, handleStatusChange }) => {
     <>
       {orders.map((order) => (
         <div key={order._id} className="row pb-5">
-          <div className="btn btn-block bg-light">
-            <ShowPaymentInfo order={order} showStatus={false} />
+          <div className="m-8 p-3 card">
+            <ShowPaymentInfoAdmin order={order} showStatus={false} />
 
             <div className="row">
               <div className="col-md-4">Delivery Status</div>
-              <div className="col-md-8">
+              <div className="col-md-10">
                 <select
                   onChange={(e) =>
                     handleStatusChange(order._id, e.target.value)

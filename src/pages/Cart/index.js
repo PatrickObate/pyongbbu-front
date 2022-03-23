@@ -39,14 +39,14 @@ const Cart = ({ history }) => {
   };
 
   const showCartItems = () => (
-    <table className="table table-bordered">
+    <table className="table table-sm">
       <thead className="thead-light">
         <tr>
           <th scope="col">Image</th>
           <th scope="col">Title</th>
           <th scope="col">Price</th>
           <th scope="col">Count</th>
-          <th scope="col">Google Drive Link</th>
+          <th scope="col">Google Drive Link:</th>
           <th scope="col">Remove</th>
         </tr>
       </thead>
@@ -95,7 +95,7 @@ const Cart = ({ history }) => {
                 <button
                   onClick={saveOrderToDb}
                   className="btn btn-sm btn-primary mt-2"
-                  disabled
+                  // disabled
                   // disabled={!cart.length}
                 >
                   Pay with Credit Card
