@@ -44,7 +44,7 @@ const Wishlist = () => {
         </WishlistCol1>
         <WishlistCol2>
           <WishlistViewContainer>
-            <div className="col">
+            <div className="col text-center pt-3">
               <h4>Wishlist</h4>
 
               {wishlist.map((p) => (

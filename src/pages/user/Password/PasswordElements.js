@@ -2,62 +2,99 @@ import styled from "styled-components";
 
 export const PasswordContainer = styled.div`
   background: #d4e9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   height: 100vh;
   position: relative;
   z-index: 1;
   /* add :before styles */
+
+  @media screen and (max-width: 980px) {
+    height: 77.4vh;
+  }
+  @media screen and (max-width: 690px) {
+    height: auto;
+    padding: 90px 20px 1px;
+  }
 `;
 
 export const PasswordWrapper = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
-  flex-direction: row;
+  
+  @media screen and (max-width: 690px) {
+    flex-direction: column;
+  }
 `;
 
 export const PasswordCol1 = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: auto;
   width: 30%;
+
+  @media screen and (max-width: 690px) {
+    width: 100%;
+  }
 `;
 export const PasswordCol2 = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: auto;
   width: 70%;
+  @media screen and (max-width: 690px) {
+    height: auto;
+    width: 100%;
+  }
 `;
 
 export const PasswordViewContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 33.75vw;
   width: 57.96875vw;
   background: white;
   border-radius: 1.7187500000000002vw;
   outline: solid #4765b2;
+  margin: auto;
+
+  @media screen and (max-width: 980px) {
+    height: 410px;
+  }
+
+  @media screen and (max-width: 690px) {
+    height: 380px;
+    font-size: 13px;
+    width: 100%;
+  }
 `;
 
 export const FormBox = styled.div`
-  width: 50%;
+  width: 100%;
+  margin: auto;
+  @media screen and (max-width: 690px) {
+    width: 100%;
+  }
 `;
 
 export const PasswordH2 = styled.h2`
   color: #71788b;
   font-size: 1.25vw;
   display: inline-block;
+  text-align: center;
+  width: 100%;
   font-weight: normal;
+  padding-top: 50px;
+  @media screen and (max-width: 980px) {
+    font-size: 17px ;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 20px;
+    padding-top: 20px;
+  }
 `;
 
 export const InputBox = styled.div`
   margin-bottom: 1.0416666666666665vw;
+  text-align: center;
+  margin: auto;
+  width: 80%;
 `;
 
 export const PasswordSpan = styled.span`
@@ -65,6 +102,12 @@ export const PasswordSpan = styled.span`
   margin-bottom: 0.26041666666666663vw;
   display: inline-block;
   color: #486eba;
+  @media screen and (max-width: 980px) {
+    font-size: 12px ;
+  }
+  @media screen and (max-width: 690px) {
+    font-size: 13px;
+  }
 `;
 
 export const PasswordInput = styled.input`
@@ -76,6 +119,11 @@ export const PasswordInput = styled.input`
   color: #4765b2;
   background: transparent;
   border-radius: 1.5625vw;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 980px) {
+    padding: 7px 5px;
+  }
 `;
 
 export const PasswordForm = styled.form`
@@ -97,5 +145,10 @@ export const PasswordButton = styled.button`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #6e86c5;
+  }
+
+  @media screen and (max-width: 980px) {
+    padding: 5px 5px 5px;
+    font-size: 10px;
   }
 `;

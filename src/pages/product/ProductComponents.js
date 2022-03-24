@@ -8,12 +8,13 @@ export const ProductsContainer = styled.div`
 
   @media only screen and (max-width: 980px) {
     /* For mobile phones: */
-    height: 70vh;
+    height: 77.4vh;
   }
   @media only screen and (max-width: 690px) {
     /* For mobile phones: */
     height: auto;
     flex-direction: column;
+
   }
 `;
 

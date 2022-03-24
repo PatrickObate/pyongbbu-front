@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  UserNavi,
   UserNavContainer,
   UserNavMenu,
   UserNavItem,
@@ -9,7 +8,6 @@ import {
 
 const UserNav = () => {
   return (
-    <UserNavi>
       <UserNavContainer>
         <UserNavMenu>
           <UserNavItem>
@@ -23,7 +21,6 @@ const UserNav = () => {
           </UserNavItem>
         </UserNavMenu>
       </UserNavContainer>
-    </UserNavi>
   );
 };
 

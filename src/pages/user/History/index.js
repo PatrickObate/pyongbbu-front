@@ -28,7 +28,7 @@ const History = () => {
     });
 
   const showOrderInTable = (order) => (
-    <table className="table table-bordered">
+    <table className="table table-sm">
       <thead className="thead-light">
         <tr>
           <th scope="col">Title</th>
@@ -85,7 +85,7 @@ const History = () => {
         </HistoryCol1>
         <HistoryCol2>
           <HistoryViewContainer style={{ overflow: "scroll" }}>
-            <div className="col text-center">
+            <div className="col text-center pt-3">
               <h4>
                 {orders.length > 0
                   ? "User purchase orders"
